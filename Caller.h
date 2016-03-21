@@ -38,6 +38,8 @@ go_crazy();
 enum Event {Hi, Bye, Die};
 Caller<Event> c;
 c.subscribeListener(Die, std::bind(foo, gaah));
+or
+c.subscribeListener(Die, std::bind(ClassB::foo, this, gaah));
 
 c.notify(Die); // Calls foo(gaah)
 */
