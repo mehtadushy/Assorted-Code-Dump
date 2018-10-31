@@ -1,0 +1,2 @@
+while IFS= read -r line; do a=( $line ); cp ../val/images/${a[0]} ./${a[1]}; done < ../val/val_annotations.txt
+
